@@ -1,0 +1,2 @@
+# Friendary
+Project for Friendary
