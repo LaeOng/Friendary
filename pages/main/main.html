@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<script>
+const loginButton = document.querySelector("button.login_button")
+
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    window.location.href = ("https://www.naver.com/")
+})
+</script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fd_logo{
+    width: 45px;
+    height: 45px;
+}
+
+div.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 10px;
+    box-shadow:0px 3px 3px #F5F5F5;
+}
+
+div.title_root {
+    display: flex;
+    align-items: center;
+}
+
+div.button_root {
+    display: flex;
+    align-items: center;
+}
+
+.header_title {
+    font-size: 25px;
+    margin-left:8%;
+}
+
+.login_button {
+    background-color: white;
+    border: none;
+    width:50px;
+}
+
+.photo_share {
+    background-color: #0FAA0F;
+    border: none ;
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    margin-left: 8%;
+    border-radius: 5px;
+    color: white;
+}
+
+.content{   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+
+}
+
+.content>.memory_share{
+    font-size: 30px;
+}
+
+.content>.start_button {
+    background-color: #0FAA0F;
+    border: none ;
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+}
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title_root">
+            <img class="fd_logo"src="../../asset/FD_logo.png" alt="fd_logo"/>
+            <div class="header_title">FrienDary</div>
+        </div>
+        <div class="button_root">
+            <button class="login_button">로그인</button>
+            <button class="photo_share">사진 공유하기</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="memory_share">추억을 공유하시겠습니까?</div>
+        <button class="start_button">시작하기</button>
+    </div>
+
+
+</body>
+</html>
