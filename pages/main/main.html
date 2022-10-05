@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<script>
-const loginButton = document.querySelector("button.login_button")
+<?php 
+    session_start();
+    include('../../dbconn/dbconn.php');
+    include('../../serverURL.php');
+?>
 
-loginButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    window.location.href = ("https://www.naver.com/")
-})
-</script>
+<!DOCTYPE html>
 
 <style>
 * {
@@ -14,18 +12,48 @@ loginButton.addEventListener('click', (e) => {
     padding: 0;
 }
 
-.fd_logo{
-    width: 45px;
-    height: 45px;
+html,body {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDN8fGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE2NjQxMTI5NjI&ixlib=rb-1.2.1&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450") ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.header {
+    width: 100%;
+    height: 91px;
+}
+
+.icon {
+    display: flex;
+    text-align: center;
+    padding: 30px 0 0 30px;
+}
+
+
+.boundary {
+    
+}
+.Friendary {
+    margin-left: 10px;
+}
+
+.sign_up_window{
+    width: 500px;
+    height: 600px;
+    background-color:rgba(91,90,90,0.8);
+    border-radius: 70px;
+    margin: 120px auto 0 auto;
+}
+
+
+/* 여기부터 이전꺼 삽입 */
 
 div.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #F5F5F5;
-    padding: 10px;
-    box-shadow:0px 3px 3px #F5F5F5;
 }
 
 div.title_root {
@@ -33,20 +61,13 @@ div.title_root {
     align-items: center;
 }
 
-div.button_root {
-    display: flex;
-    align-items: center;
-}
-
-.header_title {
-    font-size: 25px;
-    margin-left:8%;
-}
-
 .login_button {
     background-color: white;
     border: none;
-    width:50px;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 20px;
 }
 
 .photo_share {
@@ -60,29 +81,28 @@ div.button_root {
     color: white;
 }
 
-.content{   
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 300px;
-
+.sign_up_window{
+    width: 500px;
+    height: 600px;
+    background-color:rgba(91,90,90,0.8);
+    border-radius: 70px;
+    margin: 120px auto 0 auto;
+    overflow: hidden;
 }
 
-.content>.memory_share{
-    font-size: 30px;
-}
-
-.content>.start_button {
-    background-color: #0FAA0F;
-    border: none ;
-    padding: 10px;
-    width: 120px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 5px;
-    color: white;
-}
 </style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $("#sign_up").click(function(){
+        $(".sign_up_window").load("sign_up.php");
+    });
+});
+
+</script>
 
 <html lang="en">
 <head>
@@ -93,21 +113,36 @@ div.button_root {
 </head>
 <body>
     <div class="header">
-        <div class="title_root">
-            <img class="fd_logo"src="../../asset/FD_logo.png" alt="fd_logo"/>
-            <div class="header_title">FrienDary</div>
+        <div class="icon">
+            <img class="boundary" src="../../asset/boundary.png"/>
+            <img class="Friendary" src="../../asset/FrienDary.png"/>
         </div>
+
         <div class="button_root">
-            <button class="login_button">로그인</button>
+<?php
+    if(!isset($_SESSION['ID'])) {
+?>
+            <button class="login_button" id = "sign_up">회원가입</button>
+            <button class="login_button" id = "login">로그인</button>
+<?php
+    }
+    else {
+?>
+            <button class="login_button">로그아웃</button>
             <button class="photo_share">사진 공유하기</button>
+<?php
+    }
+?>
         </div>
     </div>
+    <div class="sign_up_window">
 
-    <div class="content">
-        <div class="memory_share">추억을 공유하시겠습니까?</div>
-        <button class="start_button">시작하기</button>
     </div>
-
+<div>
+<?php
+    echo "Hello";
+?>
+</div>
 
 </body>
 </html>
