@@ -1,201 +1,11 @@
 <!DOCTYPE html>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-}
-
-ul, li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
-.header {
-    width: 100%;
-    height: 91px;
-}
-
-.icon{
-    margin-right: 200px;
-}
-
-
-.header {
-    display: flex;
-
-    align-items: center;
-    border-bottom: 1px solid #F5F5F5;
-    padding-top: 10px;
-    border:none;
-    /* justify-content: space-between; */
-    
-    background-color: #D9D9D9;
-}
-
-div.title_root {
-    margin-right: 0%;
-}
-
-.icon{
-    display: flex;
-    margin-left: 3%;
-    margin-right:50%;
-}
-
-div.button_root {
-    display: flex;
-    align-items: center;
-
-}
-
-.header_title {
-    font-size: 25px;
-    margin-left:20%;    
-}
-
-.upload_button{
-    align-items: center;
-    width:200px;
-    height: 60px;
-    background-color:#007AEB;
-    border-radius: 50px;
-    border:none;
-    color: #FFFFFF;     
-    margin-right: 10%;
-}
-
-.folder_button{
-    align-items: center;
-    width:200px;
-    height: 60px;
-    border-radius: 50px;
-    margin-right: 10%;
-    border:none;
-}
-
-.invite_button{
-    align-items: center;
-    width:200px;
-    height: 60px;
-    border-radius: 50px;
-    border:none;
-    margin-right: 20%;
-}
-.user_logo{
-    width: 45px;
-    height: 45px;
-}
-
-div.main{
-    display: flex;
-    width: 1080px;
-    height: 100%;
-}
-
-.list{
-    background-color: #F0F0F0;
-    width: 30%; 
-    height: 100%;
-}
-
-.library{
-    font-size: 20px;
-    margin-left: 30px;
-
-}
-
-
-.share_album{
-    box-shadow:0px 1px 1px #DADADA;
-    height: 70px;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.image{
-    box-shadow:0px 1px 1px #DADADA;
-    height: 70px;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video{
-    box-shadow:0px 1px 1px #DADADA;
-    height: 70px;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.folder{
-    box-shadow:0px 3px 3px #DADADA;
-    height: 70px;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.collection{
-    font-size: 20px;
-    margin-left: 30px;
-}
-
-
-.people{
-    height: 70px;
-    box-shadow:0px 1px 1px #DADADA;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-.location{
-    height: 70px;
-    box-shadow:0px 1px 1px #DADADA;
-    background-color: #E8E8E8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-</style>
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feed.css">
     <title>FrienDary</title>
 </head>
 <body>
@@ -213,7 +23,7 @@ div.main{
     </div>
     <div class="main">
         <div class="list">
-            <br><br><br><br><br><br>
+            <br><br>
             <div class="library">Library</div>
             <br>
             <ul class="library_list">
@@ -230,7 +40,7 @@ div.main{
                     <span>동영상</span>
                 </li>
                 <li class="folder"   style="text-align: center;">
-                    <img class="folder_logo" src="../../asset/Vector.png" alt="folder_logo">
+                    <img class="folder_logo" src="../../asset/folder.png" alt="folder_logo">
                     <span>폴더</span>
                 </li>
             </ul>
@@ -249,10 +59,18 @@ div.main{
             </ul>
 
         </div>
+
         <div class="photo_space">
-            <br><br><br>
-            <div class="search_window"style="text-align:center">2</div>
+            <div class="search_window"style="text-align:center">
+                <div class="input_wrapper">
+                    <div class="img_input">
+                        <img id="magnifier" src="../../asset/magnifier.png">
+                        <input type="text" id = "search_bar" placeholder="search"/>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
