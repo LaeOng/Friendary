@@ -11,6 +11,7 @@
     $password = $_POST['password'];
     $pwdChk = $_POST['pwdChk'];
 
+    //에러처리
     if($password != $pwdChk) {
         echo "e2";
     }
@@ -33,7 +34,9 @@
         if($data) {
             echo "e1";
         }
+
         else {
+            //성공시
             $todate = date("Y-m-d h:i:s");
             $query2 = "INSERT INTO `memory_member_table`(`ID`, `Name`, `PW`, `authority`, `type`, `reg_date`, `del`) VALUES ('".$email."', '".$name."', '".$password."', 1, 1, '".$todate."', 'N')";
             $result2 = mysqli_query($conn,$query2);
