@@ -9,6 +9,12 @@ html, body {
   width: 100%;
 }
 
+.button_root {
+    display: flex;
+    align-items: center;
+
+}
+
 .icon{
     display: flex;
     margin-left: 1%;
@@ -63,9 +69,12 @@ html, body {
     height: 45px;
 }
 
+
+
 </style>
 
 <html>
+<div class = "header">
 <div class="icon">
     <img class="boundary" src="../../asset/boundary.png"/>
     <img class="Friendary" src="../../asset/FrienDary.png"/>
@@ -75,5 +84,6 @@ html, body {
     <button class="folder_button">폴더 생성</button>
     <button class="invite_button">사람 초대</button>
     <img class="user_logo"src="../../asset/account.png" alt="user_logo"/>
+</div>
 </div>
 </html>
