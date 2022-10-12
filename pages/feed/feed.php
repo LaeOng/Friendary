@@ -16,7 +16,7 @@
 
 <script>
     $(document).ready(function() {
-        $('.header').load("feed_head.php");
+        $('.feed_head').load("feed_head.php");
 
         $('.list').load("feed_list.php");
     });
@@ -31,7 +31,7 @@
     <title>FrienDary</title>
 </head>
 <body>
-    <div class="header">
+    <div class="feed_head">
 
     </div>
     <div class="main">
