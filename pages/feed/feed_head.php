@@ -21,10 +21,6 @@ html, body {
     margin-right:40%;
 }
 
-.boundary{
-    margin-right: 3%;
-}
-
 .header {
     display: flex;
     width: 100%;
@@ -76,8 +72,7 @@ html, body {
 <html>
 <div class = "header">
 <div class="icon">
-    <img class="boundary" src="../../asset/boundary.png"/>
-    <img class="Friendary" src="../../asset/FrienDary.png"/>
+    <img class="logo" src="../../asset/FriendaryLogo.png"/>
 </div>
 <div class="button_root">
     <button class="upload_button">업로드</button>
