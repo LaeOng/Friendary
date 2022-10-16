@@ -126,3 +126,4 @@ return (
 
             );
             };
+export default loginPage;
