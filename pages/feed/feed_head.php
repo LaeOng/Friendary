@@ -9,6 +9,17 @@ html, body {
   width: 100%;
 }
 
+.header {
+    display: flex;
+    width: 100%;
+    height: 81px;
+    align-items: center;
+    border-bottom: 1px solid #F5F5F5;
+    padding-top: 10px;
+    border:none;
+    background-color: #D9D9D9;
+}
+
 .button_root {
     display: flex;
     align-items: center;
@@ -21,15 +32,8 @@ html, body {
     margin-right:40%;
 }
 
-.header {
-    display: flex;
-    width: 100%;
-    height: 81px;
-    align-items: center;
-    border-bottom: 1px solid #F5F5F5;
-    padding-top: 10px;
-    border:none;
-    background-color: #D9D9D9;
+.boundary{
+    margin-right: 3%;
 }
 
 .upload_button{
@@ -65,20 +69,78 @@ html, body {
     height: 45px;
 }
 
+.user_menu {
+    display: flex;
+    height: 200px;
+    width: 150px;
+    border: 1px solid;
+    float: right;
+}
+.user_menu ul {
+    border: 1px solid;
+}
+
+.user_menu ul li {
+    border: 1px solid;
+    height: 30px;
+    width: 150px;
+    text-align: center;
+}
+
+<?php
+    $req = $_POST['popup'];
+?>
 
 
 </style>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".user_menu").hide(); //초기값
+
+        //슬라이드 함수
+        $(".user_logo").click(function() {
+            $(".user_menu").slideToggle("fast");
+        });
+
+    });
+</script>
+
+<?php
+    //페이지별 구분
+    if(!isset($ptype)) {
+        $ptype = "standard";
+    }
+?>
+
 <html>
 <div class = "header">
-<div class="icon">
-    <img class="logo" src="../../asset/FriendaryLogo.png"/>
+    <div class="icon">
+        <img class="boundary" src="../../asset/boundary.png"/>
+        <img class="Friendary" src="../../asset/FrienDary.png"/>
+    </div>
+    <div class="button_root">
+<?php
+        if($ptype = "feed") {
+?>
+        <button class="upload_button">업로드</button>
+        <button class="folder_button">폴더 생성</button>
+        <button class="invite_button">사람 초대</button>
+        <img class="user_logo"src="../../asset/account.png" alt="user_logo"/>
+<?php
+        }
+?>
+    </div>
 </div>
-<div class="button_root">
-    <button class="upload_button">업로드</button>
-    <button class="folder_button">폴더 생성</button>
-    <button class="invite_button">사람 초대</button>
-    <img class="user_logo"src="../../asset/account.png" alt="user_logo"/>
-</div>
+<div class = "user_menu" >
+    <ul>
+        <li>내 프로필</li>
+        <li>그룹관리</li>
+        <li><a href = "../my_account/acc_modify.php">프로필 수정</a></li>
+        <li>결제 정보 관리</li>
+        <li>로그아웃</li>
+    </ul>
 </div>
 </html>
