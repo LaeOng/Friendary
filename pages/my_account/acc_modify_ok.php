@@ -24,7 +24,6 @@
     $f_name = $file['name'];
 
     if(!empty($f_name)) {
-        // $query = "SELECT `id_No` FROM `memory_member_table` WHERE `ID` = $m_ID";
         $f_size = $file['size'];
         $mb_size = $f_size/1024/1024;
         $f_tmp_name = $file['tmp_name'];
@@ -35,11 +34,8 @@
         //확장자 검사
         $f_type = explode(".",$f_name);
         $avail_type = array(0,'jpeg','gif','png', 'jpg');
-        // echo $f_type[0] . $f_type[1];
-        echo array_search($f_type[1],$avail_type)%1;
         if(array_search($f_type[1],$avail_type) == 0) {
             echo $f_type . "<script>alert('이미지 파일만 업로드 가능합니다');location.href = '".$history."';</script>";
-            // echo $f_type[1];
         }
         else if($mb_size > 5){
             echo "<script>alert('이미지는 5mb를 초과할 수 없습니다');location.href = '".$history."';</script>";
