@@ -180,8 +180,6 @@ html, body {
         let password = form.password.value;
         let pwdChk = form.pwdChk.value;
 
-        $('#pass')
-
         if(password.length <= 8) {
             event.preventDefault();
             alert("비밀번호는 최소 8자 이상이어야 합니다");
@@ -234,13 +232,7 @@ html, body {
                         // 수정요청: user_profile 이미지 사이즈 자동조절요청 / 직접 회원가입해서 이미지 업로드 하면서 해봐야할듯
                         $query = "SELECT a.`id_No`, b.`pimg_No`, b.`f_type` FROM `memory_member_table` AS a INNER JOIN `memory_profile_image_table` AS b ON a.`id_No` = b.`id_No` WHERE a.`ID` = '$sessionid' AND b.`del` = 'N'";
                         $data2 = mysqli_fetch_array(mysqli_query($conn,$query));
-                        echo $data2['pimg_No'];
-                        if($data2['pimg_No']) {
-                            echo "set";
-                        }
-                        else {
-                            echo "not set";
-                        }
+
                         if(isset($data2['pimg_No'])) {
                             $f_name = $data2['pimg_No'] . "_" . $data2['id_No'] . "." . $data2['f_type'];
                             echo $f_name;

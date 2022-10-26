@@ -70,13 +70,12 @@
             $saveURL = "../../asset/user_profile/{$new_name}";
             $upload = move_uploaded_file($f_tmp_name, $saveURL);
 
-            if($upload == true) {
-                echo "업로드 정상";
+            if($upload != true) {
+                echo "<script>alert('알수 없는 오류로 변경에 실패했습니다');location.href = 'acc_modify.php';</script>"; //임시
             }
-            else {
-                echo "실패";
-            }
-            
+          
         }
     }
+    echo "hi";
+    echo "<script>alert('변경이 완료되었습니다');location.href = 'acc_modify.php';</script>"; //임시
 ?>
