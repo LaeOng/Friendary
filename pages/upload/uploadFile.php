@@ -73,65 +73,17 @@
         
           <div class="post-text-location">
             <div class="post-text">
-              <span class="placeholder">추억에 도움이 될만한 글을 작성해주세요</span>
-              <div class="input editable" contenteditable="true" spellcheck="false"></div>
-              <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+             	<textarea class="post-text-input" placeholder="추억에 도움이 될만한 글을 작성해주세요" cols="10" rows="4"></textarea>
             </div>
-          <div class="post-location" name = "post-location">
-            <span class="placeholder">장소를 입력하세요</span>
-            <div class="input editable" contenteditable="true" spellcheck="false"></div>
-            <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+          <div class="post-location">
+			  <input type="text" id="post-location-input" name="location" required minlength="5" maxlength="30"
+placeholder="장소를 입력하세요">
           </div>                
           <button class="share" onclick = "share_btn()"><span>공유하기</span></button>
           </div>
         </form>
       </div>
-<script>
-editableInput = wrapper.querySelector(".editable"),
-readonlyInput = wrapper.querySelector(".readonly"),
-placeholder = wrapper.querySelector(".placeholder"),
-button = wrapper.querySelector("share");
-editableInput.onfocus = ()=>{
-  placeholder.style.color = "#5B5A5A";
-}
-editableInput.onblur = ()=>{
-  placeholder.style.color = "c5ccd3";
-}
-editableInput.onkeyup = (e)=>{
-  let element = e.target;
-  validated(element);
-}
-editableInput.onkeypress = (e)=>{
-  let element = e.target;
-  validated(element);
-  placeholder.style.display = "none";
-}
-function validated(element){
-  let text;
-  let maxLength = 100;
-  let currentlength = element.innerText.length;
-  if(currentlength <= 0){
-    placeholder.style.display = "block";
-    counter.style.display = "none";
-    button.classList.remove("active");
-  }else{
-    placeholder.style.display = "none";
-    counter.style.display = "block";
-    button.classList.add("active");
-  }
-  counter.innerText = maxLength - currentlength;
-  if(currentlength > maxLength){
-    let overText = element.innerText.substr(maxLength); //extracting over texts
-    overText = `<span class="highlight">${overText}</span>`; //creating new span and passing over texts
-    text = element.innerText.substr(0, maxLength) + overText; //passing overText value in textTag variable
-    readonlyInput.style.zIndex = "1";
-    counter.style.color = "#e0245e";
-    button.classList.remove("active");
-  }else{
-    readonlyInput.style.zIndex = "-1";
-  }
-  readonlyInput.innerHTML = text; //replacing innerHTML of readonly div with textTag value
-}</script>
+
     </body>
     
 </html>
