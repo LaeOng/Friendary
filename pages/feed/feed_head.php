@@ -116,6 +116,14 @@ html, body {
     else {
         $ptype = "standard";
     }
+
+    //피드일 경우
+    if ($ptype == "feed") {
+        $style_input = "style = 'visibility : visible;'";
+    }
+    else {
+        $style_input = "style = 'visibility : hidden;'";
+    }
 ?>
 
 <html>
@@ -125,19 +133,13 @@ html, body {
         <img class="Friendary" src="../../asset/FrienDary.png"/>
     </div>
     <div class="button_root">
-<?php
-        if($ptype == "feed") {
-?>
-        <button class="upload_button" ><a href = "../upload/uploadFile.php">업로드</a></button>
-        <button class="folder_button">그룹 생성</button>
-        <button class="invite_button">사람 초대</button>
+        <button class="upload_button" <?php echo $style_input?>><a href = "../upload/uploadFile.php">업로드</a></button>
+        <button class="folder_button" <?php echo $style_input?>>그룹 생성</button>
+        <button class="invite_button" <?php echo $style_input?>>사람 초대</button>
         <img class="user_logo"src="../../asset/account.png" alt="user_logo"/>
-<?php
-        }
-?>
     </div>
 </div>
-<div class = "user_menu" >
+<div class = "user_menu" style = "display: none">
     <ul>
         <li>내 프로필</li>
         <li>그룹관리</li>
