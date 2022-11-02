@@ -34,6 +34,9 @@
     $group_No = 1;
 
     $file = $_FILES['file'];
+    $text = $_POST['text'];
+    $location = $_POST['location'];
+
 
     $availExt = array(0, "gif","jpeg","jpg","png");
     $rs_name = date("Ymd");
@@ -41,7 +44,7 @@
     $f_count = count($file['name']);
 
     if(isset($file)) {
-
+        
         for ($i = 0; $i < $f_count; $i++) {
             $f_name = $file['name'][$i];
             $f_size = $file['size'][$i];
@@ -69,7 +72,7 @@
 
                 $f_type = explode(".",$f_name);
 
-                $query = "INSERT INTO `memory_content_table`(`group_No`, `bundle_No`, `love`, `hate`, `reg_date`, `del`) VALUES ('$group_No', '$bundle_No', '0','0','$todate','N')";
+                $query = "INSERT INTO `memory_content_table`(`group_No`, `bundle_No`, `detail`, `location`, `love`, `hate`, `reg_date`, `del`) VALUES ('$group_No', '$bundle_No', '$text', '$location', '0','0','$todate','N')";
                 mysqli_query($conn,$query);
 
                 $query = "SELECT `content_No` FROM `memory_content_table` WHERE `group_No` = '$group_No' ORDER BY `content_No` DESC LIMIT 1";
