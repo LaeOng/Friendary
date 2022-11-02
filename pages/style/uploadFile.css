@@ -74,9 +74,10 @@ html, body{
   .post-text-input{
     font-size: 13px;
     width: 351px;
-      height: 161px;
-  border: 2px solid rgba(224, 224, 224, 0.5);
-      outline-color: #5B5A5A;
+    height: 161px;
+    border: 2px solid rgba(224, 224, 224, 0.5);
+    outline-color: #5B5A5A;
+    resize: none;
   }
   
   .post-location{
