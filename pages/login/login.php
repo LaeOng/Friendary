@@ -6,6 +6,16 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+$("#sign_up").click(function(){
+    $(".home_window").load("sign_up.php");
+});
+
+});
+
+</script>
 
 <script> //카카오 코드 출처 https://mintea.tistory.com/11
     $jsApiKey = "64374b375fbf28c742a1960e1c3d943e";
