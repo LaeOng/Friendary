@@ -110,7 +110,7 @@ html, body{
       cursor: pointer;
   }
   
-  .share span{
+  .share {
       color: #fff;
       font-size: 13px;
   }
