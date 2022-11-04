@@ -119,7 +119,7 @@ ul, li {
 
         $('.list').load("feed_list.php");
 
-        $('.photo_space').load("pages/test.php");
+        $('.photo_space').load("pages/show_recent.php");
     }); 
 </script>
 
