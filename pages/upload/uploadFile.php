@@ -80,7 +80,7 @@
           <div class="post-location">
 			  <input type="text" id="post-location-input" name="location" required minlength="5" maxlength="30" placeholder="장소를 입력하세요">
           </div>                
-          <button class="share" onclick = "share_btn()"><span>공유하기</span></button>
+          <button type="submit" class="share" onclick = "share_btn()">공유하기</button>
           </div>
         </form>
       </div>
