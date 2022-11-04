@@ -53,7 +53,7 @@
     <head>
         <meta charset="utf-8">
         <title>파일 업로드</title>
-        <link rel="stylesheet" href="./uploadFile.css">
+        <link rel="stylesheet" href="../style/uploadFile.css">
        <script src="https://kit.fontawesome.com/6a08573921.js" crossorigin="anonymous"></script>
     </head>
     <body>
