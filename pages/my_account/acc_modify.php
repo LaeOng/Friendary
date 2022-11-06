@@ -113,7 +113,15 @@ html, body {
 .input{
     width: 300px;
     height: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    border:none;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.input2{
+    width: 300px;
+    height: 35px;
     border:none;
     border-radius: 10px;
     padding-left: 20px;
@@ -122,7 +130,7 @@ html, body {
 #button_domain{
     display: flex;
     flex-direction: row;
-    margin-top: 35px;
+    margin-top: 5px;
 }
 
 #correction_button{
@@ -260,9 +268,9 @@ html, body {
                     <!-- <span class = "dbChk" id = "name_dbChk"></span> //닉네임 중복 체크 안해도 되지 않나요-->
                     <!-- 수정요청: 임시 css 적용됨 차후에 수정 요청 / 이메일은 disabled 처리해야함-->
                     <input type="text" class="input" id="email_input" name = "email" value="<?php echo $data['ID']?>" style = "border: 1px solid" disabled/>
-                    <input type="text" class="input" id="password_input" name = "password">
+                    <input type="text" class="input2" id="password_input" name = "password">
                     <span class = "dbChk" id = "password_dbChk"></span>
-                    <input type="text" class="input" id="pwdChk_input" name = "pwdChk">
+                    <input type="text" class="input2" id="pwdChk_input" name = "pwdChk">
                     <span class = "dbChk" id = "pwdChk_dbChk"></span>
 
                     <div id="button_domain">
