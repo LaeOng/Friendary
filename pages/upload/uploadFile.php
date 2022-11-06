@@ -52,39 +52,43 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>파일 업로드</title>
         <link rel="stylesheet" href="../style/uploadFile.css">
        <script src="https://kit.fontawesome.com/6a08573921.js" crossorigin="anonymous"></script>
     </head>
     <body>
       <!-- 수정 요청: feed_head가 html body 에 씌워진 justify-content: center & align-content: center 때문에 상단에 노출이 안됨 -->
-      <div class = "feed_head"></div>
-      <div class="wrapper">
+      <div class="friendary-header">
+		<a href="">
+			<img src="../../asset/FriendaryLogo.png" alt="friendary">
+		</a>
+	</div>
         <form id = "content_upload_form" action ="uploadFile_ok.php" method = "POST" enctype = "multipart/form-data">
           <!-- 임시 그룹 = 1, 번들 = 0 그룹생성과 번들 생성이 구현되지 않음-->
           <input type = "hidden" name = "group_No" value = 1>
           <input type = "hidden" name = "bundle_No" value = 0>
-          <div class="upload-box">
-              <div class="upload-box-content">
-                  <label for="fileInput">
-                      <i class="fa-solid fa-camera fa-4x"></i></label>
-                      <input id="fileInput" type="file" id = "file_Upload" name = "file[]" multiple>
-                      <div class="upload-text">사진을 업로드 하세요</div>
-              </div>
-          </div> <!-- upload-box -->
-        
-          <div class="post-text-location">
-            <div class="post-text">
-             	<textarea class="post-text-input" name = "text" placeholder="추억에 도움이 될만한 글을 작성해주세요" cols="10" rows="4"></textarea>
-            </div>
-          <div class="post-location">
-			  <input type="text" id="post-location-input" name="location" required minlength="5" maxlength="30" placeholder="장소를 입력하세요">
-          </div>                
-          <button type="submit" class="share" onclick = "share_btn()">공유하기</button>
-          </div>
-        </form>
-      </div>
+          <div class="friendary-upload">
+		<div class="upload-photo-input">
+			<label for="file-input">
+				<i class="fa-solid fa-camera fa-4x"></i>
+				<input id="file-input" type="file">
+				<h1>
+					사진을 업로드 하세요
+				</h1>
+			</label>
+		</div>
 
-    </body>
-    
+		<div class="upload-text-input">
+			<div class="upload-text-item">
+				<textarea placeholder="추억에 도움이 될만한 글을 작성해주세요" cols="10" rows="4"></textarea></div>
+			<div class="upload-text-item">
+			<input type="text" name="location" id="post-location-input" placeholder="장소를 입력하세요">
+			</div>
+			<button type="submit" class="upload-button">
+			공유하기
+		</button>
+		</div>
+		</div>
+</body>
 </html>
