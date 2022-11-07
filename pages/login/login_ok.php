@@ -2,6 +2,8 @@
     session_start();
     include('../../dbconn/dbconn.php');
 
+    header("Content-Type: application/json"); //json 필수
+
     $ID = $_POST['ID'];
     $PW = $_POST['PW'];
 
@@ -16,15 +18,13 @@
 
     if(isset($user_data)){
         $_SESSION['ID'] = $user_data['ID'];
-        header("Location: login.php");
-        echo $_SESSION['ID'];
-        echo $user_data['ID'];
+        echo "s1";
     }
     else if(isset($user_data2)){
-        echo "<script>alert('비밀번호를 다시 확인해주세요!');location.href = 'login.php';</script>";
+        echo "e1";
     }
     else {
-        echo "<script>alert('존재하지 않는 회원입니다.');location.href = 'login.php';</script>";
+        echo "e2";
     }
 
 ?>

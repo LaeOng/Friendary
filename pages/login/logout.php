@@ -7,5 +7,5 @@ session_destroy();
 ?>
 
 <?php 
-    echo "<script>alert('안전하게 로그아웃 되었습니다.');location.href = '../main/main.php';</script>";
+    echo "<script>alert('안전하게 로그아웃 되었습니다.');location.href = '../main/home.php';</script>";
 ?>
