@@ -68,15 +68,14 @@
           <!-- 임시 그룹 = 1, 번들 = 0 그룹생성과 번들 생성이 구현되지 않음-->
           <input type = "hidden" name = "group_No" value = 1>
           <input type = "hidden" name = "bundle_No" value = 0>
-          <div class="friendary-upload">
-		<div class="upload-photo-input">
-			<label for="file-input">
-				<i class="fa-solid fa-camera fa-4x"></i>
-				<input id="file-input" type="file">
-				<h1>
+          <div class="upload-box">
+		<div class="upload-box-content">
+			<label for="fileInput">
+				<i class="fa-solid fa-camera fa-4x"></i></label>
+				<input id="fileInput" type="file" id="file_Upload" name="file[]" multiple>
+				<div class="upload-text">
 					사진을 업로드 하세요
-				</h1>
-			</label>
+				</div>
 		</div>
 
 		<div class="upload-text-input">
