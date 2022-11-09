@@ -66,3 +66,119 @@
         <button class="invite_button">함께 추억할 상대 초대하기</button>
     </div>
 </html>
+
+<div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="./l.png" alt="l">
+        </div>
+        <div class="slide slide-1">
+             <!-- <div class="caption">
+                 <h3>New York</h3>
+                 <p>We love the Big Apple!</p>
+             </div> -->
+        </div>
+        <div class="slide slide-2">
+            <!-- <div class="caption">
+                <h3>Los Angeles</h3>
+                <p>LA is always so much fun!</p>
+            </div> -->
+       </div>
+       <div class="slide slide-3">
+            <!-- <div class="caption">
+                <h3>Bahar Dar</h3>
+                <p>Thank you, Bahar Dar!</p>
+            </div> -->
+       </div>
+       <div class="arrow r" onclick="next()">
+            <img src="./r.png" alt="r">
+        </div>
+    </div>
+
+    <!-- slider 주석처리
+        <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls(){
+            for(let i = 0; i < slide.length; i++){
+                  slide[i].style.display = 'none';
+            }
+        }
+
+        function next(){
+            cls();
+            if(current === slide.length-1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev(){
+            cls();
+            if(current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start(){
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script> -->
+
+    <!-- <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    background: rgba(224, 224, 224, 0.5);
+}
+.slide-1 {
+    background: url('./background.jpg');
+}
+.slide-2 {
+    background: url('./background-1.jpg');
+}
+.slide-3 {
+    background: url('./background-3.jpg');
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+    </style> -->
+
