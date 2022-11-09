@@ -21,7 +21,7 @@
       padding: 20px;
   }
   
-  .friendary-upload {
+  .upload-box {
       position: fixed;
       background-color: rgba(224, 224, 224, 0.5);
       border: 1px solid rgba(0, 0, 0, 0.2);
@@ -36,7 +36,7 @@
       transform: translate(-50%, -50%);
   }
   
-  .upload-photo-input {
+  .upload-box-content {
       width: 250px;
       height: 250px;
       border-radius: 10px;
@@ -48,17 +48,20 @@
       text-align: center;
   }
   
-  .upload-photo-input h1 {
+  .upload-text {
       font-size: 12px;	
       color: #5B5A5A;
+      text-align: center;
   }
   
-  .upload-photo-input i{
-      margin-bottom: 30px;
+  .upload-box-content i{
+      margin-bottom: 15px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
   }
   
-  #file-input{
+  #fileInput{
         display: none;
     }
   
