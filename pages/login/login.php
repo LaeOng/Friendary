@@ -13,7 +13,10 @@
             $(".home_window").load("sign_up.php");
         });
 
-        
+        $(".login-content-body-main-signup-btn").click(function(){
+            $(".home_window").load("sign_up.php");
+        });
+
 
     });
 
